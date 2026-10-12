@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+/* =========================================================
+   ROOT THEME — EMERALD (default)
+========================================================= */
+
+:root {
+  /* APP BACKGROUND */
+  --bg: #e8f5f1;
+
+  /* SURFACES */
+  --card: #ffffff;
+  --panel: #F6F5F2;
+
+  /* FOLDER SYSTEM */
+  --shell-bg: #1a6b60;
+  --folder-top: #e8f5f1;
+  --folder-body: #e8f5f1;
+
+  /* BRAND */
+  --primary: #1a6b60;
+  --primary-light: #2a9d8f;
+  --accent: #8CC850;
+
+  /* TEXT */
+  --text: #1a3830;
+  --text-soft: #5a8880;
+  --text-muted: #3a3a3a;
+
+  /* UI */
+  --border: #dce8e5;
+  --input-bg: #f5faf9;
+
+  /* SHADOWS */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-panel: 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-folder: 0 30px 60px rgba(0,0,0,0.18);
+
+  /* RADII */
+  --radius-folder: 42px;
+  --radius-panel: 28px;
+  --radius-card: 22px;
+  --radius-input: 18px;
+}
+
+/* =========================================================
+   ORANGE THEME
+========================================================= */
+
+.theme-orange {
+  --bg: #fef6ee;
+  --card: #ffffff;
+  --panel: #fdf3e8;
+  --shell-bg: #c2410c;
+  --folder-top: #fef6ee;
+  --folder-body: #fef6ee;
+  --primary: #c2410c;
+  --primary-light: #ea580c;
+  --accent: #f59e0b;
+  --text: #431407;
+  --text-soft: #9a3412;
+  --text-muted: #6b4226;
+  --border: #fed7aa;
+  --input-bg: #fff7ed;
+  --shadow-soft: 0 4px 12px rgba(194,65,12,0.06);
+  --shadow-panel: 0 8px 24px rgba(194,65,12,0.08);
+  --shadow-folder: 0 30px 60px rgba(194,65,12,0.18);
+}
+
+/* =========================================================
+   BLUE THEME
+========================================================= */
+
+.theme-blue {
+  --bg: #eff6ff;
+  --card: #ffffff;
+  --panel: #eff6ff;
+  --shell-bg: #1e40af;
+  --folder-top: #eff6ff;
+  --folder-body: #eff6ff;
+  --primary: #1e40af;
+  --primary-light: #3b82f6;
+  --accent: #06b6d4;
+  --text: #1e293b;
+  --text-soft: #3b5998;
+  --text-muted: #475569;
+  --border: #bfdbfe;
+  --input-bg: #f0f7ff;
+  --shadow-soft: 0 4px 12px rgba(30,64,175,0.06);
+  --shadow-panel: 0 8px 24px rgba(30,64,175,0.08);
+  --shadow-folder: 0 30px 60px rgba(30,64,175,0.18);
+}
+
+/* =========================================================
+   PURPLE THEME
+========================================================= */
+
+.theme-purple {
+  --bg: #f5f3ff;
+  --card: #ffffff;
+  --panel: #f3f0ff;
+  --shell-bg: #6d28d9;
+  --folder-top: #f5f3ff;
+  --folder-body: #f5f3ff;
+  --primary: #6d28d9;
+  --primary-light: #8b5cf6;
+  --accent: #ec4899;
+  --text: #1e1033;
+  --text-soft: #6b21a8;
+  --text-muted: #5b4278;
+  --border: #ddd6fe;
+  --input-bg: #faf8ff;
+  --shadow-soft: 0 4px 12px rgba(109,40,217,0.06);
+  --shadow-panel: 0 8px 24px rgba(109,40,217,0.08);
+  --shadow-folder: 0 30px 60px rgba(109,40,217,0.18);
+}
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+.theme-dark {
+  --bg: #0f1a17;
+  --card: #17211e;
+  --panel: #17211e;
+  --shell-bg: #0b0f0e;
+  --folder-top: #1a2421;
+  --folder-body: #111b18;
+  --primary: #2a9d8f;
+  --primary-light: #3dbdb0;
+  --accent: #8CC850;
+  --text: #e8f5f1;
+  --text-soft: #8aada6;
+  --text-muted: #6a8b85;
+  --border: #263633;
+  --input-bg: #1a2622;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.25);
+  --shadow-panel: 0 10px 30px rgba(0,0,0,0.3);
+  --shadow-folder: 0 40px 80px rgba(0,0,0,0.45);
+}
+
+/* =========================================================
+   MIDNIGHT THEME
+========================================================= */
+
+.theme-midnight {
+  --bg: #0f1117;
+  --card: #16181f;
+  --panel: #16181f;
+  --shell-bg: #090b11;
+  --folder-top: #1a1d28;
+  --folder-body: #12141c;
+  --primary: #5b8dee;
+  --primary-light: #7aa3f5;
+  --accent: #e2c275;
+  --text: #e8eaf5;
+  --text-soft: #7a8aad;
+  --text-muted: #5a6580;
+  --border: #23263a;
+  --input-bg: #1a1c28;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.22);
+  --shadow-panel: 0 10px 30px rgba(0,0,0,0.28);
+  --shadow-folder: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+/* =========================================================
+   GLOBALS
+========================================================= */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--shell-bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
+/* =========================================================
+   REUSABLE CLASSES
+========================================================= */
+
+.folder-shell {
+  background: var(--folder-top);
+  border-radius: var(--radius-folder);
+  box-shadow: var(--shadow-folder);
+  border: 1px solid var(--border);
+}
+
+.folder-body {
+  background: var(--folder-body);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-panel);
+}
+
+.card-layer {
+  background: var(--card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.input-layer {
+  background: var(--input-bg);
+  border-radius: var(--radius-input);
+  border: 1px solid var(--border);
+}
+
+/* =========================================================
+   SUBTLE PAPER GRAIN
+========================================================= */
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.8) 0.6px,
+      transparent 0.6px
+    );
+  background-size: 12px 12px;
+  z-index: 9999;
+}
+
+/* =========================================================
+   RESPONSIVE HELPERS
+========================================================= */
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
